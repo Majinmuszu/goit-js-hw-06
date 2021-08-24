@@ -22,3 +22,14 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+/*TASK 3*/
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery>li>img {
+  max-width: 100%;
+  height: auto;
+}
+/*END OF TASK 3*/

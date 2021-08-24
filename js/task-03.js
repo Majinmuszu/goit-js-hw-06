@@ -13,11 +13,16 @@ const images = [
   },
 ];
 const qs = (selector) => document.querySelector(selector);
+
 const gallery = qs('.gallery')
-images.forEach((img)=>{
-  const imgTag = document.createElement('img');
-  img.src  = img.url;
-  img.alt = img.alt;
-  gallery.append(imgTag);
-})
+
+ images.forEach((image)=>{
+const galleryItem = document.createElement('li');
+ gallery.append(galleryItem);
+ const imgTag = document.createElement('img');
+  imgTag.src  = image.url;
+  imgTag.alt = image.alt;
+ galleryItem.append(imgTag);
+ })
+
 
