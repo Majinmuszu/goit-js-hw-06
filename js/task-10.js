@@ -14,22 +14,25 @@ log(numOfBoxes)
 
 const createBoxes = (amount) => {
   let value = numOfBoxes.value;
-  const boxes = [];
-  const box = document.createElement('div');
-  for (let i = 1; i <= value; i++) {
-    boxes.push(i);
-  };
-  boxes.forEach((e) => {
-    divOfBoxes.append(box);
+  let size = 30;
 
-  })
+  for (let i = 1; i <= value; i++) {
+    const box = document.createElement('div');
+    divOfBoxes.append(box);
+    let divBox = qs('#boxes>div');
+    log(divBox)
+    divBox.style.backgroundColor = 'red' ;
+    divBox.style.width = '30px';
+    divBox.style.height = '30px';
+  };
   
   
   log(boxes);
   log(amount)
 };
 const destroyBoxes = () => {
-
+  let divBox = qs('#boxes>div');
+  divBox.remove();
 };
 addBoxes.addEventListener('click', createBoxes);
 removeBoxes.addEventListener('click', destroyBoxes)
